@@ -1,0 +1,39 @@
+body {
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: $main-color;
+}
+
+a {
+    text-decoration: none;
+    color: $main-color;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+
+	@media screen and (min-width: $breakpoint-md) {
+		max-width: 708px;
+	}
+	
+	@media screen and (min-width: $breakpoint-lg) {
+		max-width: 964px;
+	}
+
+	@media screen and (min-width: $breakpoint-xl) {
+		max-width: 1200px;
+	}
+}
+
+.footer {
+	padding: 3rem 0;
+	font-size: 1.6rem;
+}
+
+.btn {
+    border-radius: 6px;
+    background: $brand-color;
+    padding: 8px 17px;
+	color: $text-color;
+}

@@ -1,0 +1,217 @@
+.header {
+    padding: 26px 12px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(70, 163, 88, 0.50);
+        padding: 0 0 20px;
+        gap: 0;
+
+        @media screen and (min-width: $breakpoint-md) {
+            gap: 45px;
+        }
+
+        @media screen and (min-width: $breakpoint-xl) {
+            gap: 137px;
+        }
+    }
+
+    &__logo {
+        background: url(/src/img/icons/logo-cropped.svg) no-repeat;
+        object-fit: cover;
+        height: 35px;
+        width: 35px;
+        display: inline-block;
+
+        @media screen and (min-width: $breakpoint-lg) {
+            background: url(/src/img/icons/logo.svg) no-repeat;
+            height: 35px;
+            width: 150px;
+        }
+    }
+
+    &__inner-burger {
+        width: 18px;
+        height: 14px;
+        position: relative;
+        cursor: pointer;
+        margin: 5px 0 0;
+    
+        @media screen and (min-width: $breakpoint-md) {
+            display: none;
+        }
+    
+        &::before,
+        &::after,
+        span {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 2px;
+            background: $brand-color;
+        }
+    
+        &::after {
+            top: auto;
+            bottom: 0;
+        }
+    
+        span {
+            top: 50%;
+            transform: translateY(-50%);
+        }    
+    }
+
+    &__menu {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-direction: column;
+        font-size: 16px;
+
+        @media screen and (min-width: $breakpoint-md) {
+            flex-direction: row;
+            gap: 28px;
+        }
+
+        @media screen and (min-width: $breakpoint-lg) {
+            gap: 50px;
+            font-size: 18px;
+        }
+    }
+
+    &__menu-item {
+        &.active {
+            border-bottom: none;
+            padding: 0;
+            @media screen and (min-width: $breakpoint-md) {  
+                a {
+                    border-bottom: 3px solid $brand-color;
+                    font-weight: 700;
+                }
+            }
+        }
+
+
+        a {
+            display: block;
+            width: 100%;
+            color: $main-color;
+            font-weight: 400;
+            transition: all .3s linear;
+            font-size: 20px;
+
+            &:hover {
+                background: rgba($text-color, 0.7);
+                padding: 7px 100px;
+                border-radius: 10px 0;
+                transition: all .3s linear;
+            }
+
+            @media screen and (min-width: $breakpoint-md) {
+                font-size: 18px;
+            
+                &:hover {
+                    padding: 0;
+                    background: transparent;
+                    border-radius: 0;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    &__menu-left {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+
+    &__menu-right {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+
+        @media screen and (min-width: $breakpoint-lg) {
+            gap: 35px;
+        }
+
+        svg {
+            height: 25px;
+            width: 25px;
+        }
+    }
+
+    &__menu-search {
+    }
+
+    &__menu-basket {
+    }
+
+    &__menu-btn {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        svg {
+            height: 20px;
+            width: 20px;
+           // fill: $text-color;
+        }
+    }
+}
+
+.header__nav {
+    position: fixed;
+    z-index: 20;
+    bottom: -100%;
+    left: 5px;
+    right: 5px;
+    background: rgba($brand-color, 0.9);
+    padding: 25px 12px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 6px;
+    
+    &.active {
+        bottom: 0;
+      }
+
+    @media screen and (min-width: $breakpoint-md) {
+        display: block;
+        border-radius: 0;
+        position: static;
+        background: transparent;
+        padding: 0;
+        bottom: -100%;
+    }
+
+    &-close {
+        width: 22px;
+        height: 22px;
+        position: relative;
+        cursor: pointer;
+        margin: 0 0 20px auto;
+        
+        &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $text-color;
+        transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    
+        @media screen and (min-width: $breakpoint-md) {
+            display: none;
+        }
+    }
+}
