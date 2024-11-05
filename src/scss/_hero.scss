@@ -1,0 +1,75 @@
+.hero {
+
+    &__container {
+        background: linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%);
+        padding: 34px 43px 85px;
+        position: relative;
+
+        @media screen and (min-width: $breakpoint-sm) {
+            padding: 68px 43px 85px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        font-size: 60px;
+        font-weight: 900;
+        line-height: 70px;
+        text-transform: uppercase;
+        padding: 10px 0 10px;
+        max-width: 570px;
+
+        @media screen and (min-width: $breakpoint-md) {
+            font-size: 70px;
+        }
+
+        span {
+            color: $brand-color;
+        }
+    }
+
+    &__desc {
+        color: #727272;
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 570px;
+        padding: 0 0 44px;
+        display: none;
+
+        @media screen and (min-width: $breakpoint-sm) {
+            display: block;
+        }
+    }
+
+    &__btn {
+        padding: 10px 26px;
+        text-transform: uppercase;
+        margin: 10px 0 0;
+    }
+
+    &__img-small {
+        bottom: 30px;
+        right: 300px;
+    }
+
+    &__img-big {
+        bottom: 0;
+        right: 0;
+    }
+
+    &__img-big, &__img-small {
+        position: absolute;
+        z-index: -1;
+
+        @media screen and (min-width: $breakpoint-lg) {
+            z-index: 1;
+        }
+    }
+}
