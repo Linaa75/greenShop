@@ -13,17 +13,30 @@ a {
     padding: 0 15px;
     margin: 0 auto;
 
+	@media screen and (min-width: $breakpoint-sm) {
+		max-width: 700px;
+	}
+
 	@media screen and (min-width: $breakpoint-md) {
-		max-width: 708px;
+		max-width: 870px;
 	}
 	
 	@media screen and (min-width: $breakpoint-lg) {
-		max-width: 964px;
+		max-width: 1200px;
 	}
 
 	@media screen and (min-width: $breakpoint-xl) {
-		max-width: 1200px;
+		max-width: 1400px;
 	}
+}
+
+.wrapper__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex: 1 1 100%;
+	gap: 55px;
+	padding: 46px 0 0;
 }
 
 .footer {

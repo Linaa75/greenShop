@@ -53,4 +53,8 @@
   <path d="M2 5.33333H0V8H2V16H5.33333V8H7.73333L8 5.33333H5.33333V4.2C5.33333 3.6 5.46667 3.33333 6.06667 3.33333H8V0H5.46667C3.06667 0 2 1.06667 2 3.06667V5.33333Z" fill="#46A358" fill-opacity="0.6"/>
   </symbol>
 
+  <symbol width="8" height="12" viewBox="0 0 8 12" fill="none" id="arrow">
+    <path d="M1.375 0.75C1.375 0.75 6.625 3.858 6.625 6C6.625 8.14125 1.375 11.25 1.375 11.25" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
 </svg>

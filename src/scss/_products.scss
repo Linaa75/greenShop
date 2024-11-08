@@ -1,8 +1,19 @@
 .products {
-    padding: 46px 0 0;
     line-height: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+
+    @media screen and (min-width: $breakpoint-md) {
+        flex: 1 1 46%;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+        flex: 1 1 54%;
+    }
 
     &__container {
+        position: relative;
     }
 
     &__list {
@@ -79,14 +90,9 @@
             height: 120px;
             width: 120px;
 
-            @media screen and (min-width: $breakpoint-md) {
+            @media screen and (min-width: $breakpoint-lg) {
                 height: 200px;
                 width: 200px;
-            }
-
-            @media screen and (min-width: $breakpoint-lg) {
-                height: 250px;
-                width: 250px;
             }
         }
     }
@@ -153,6 +159,32 @@
             }
         }
     }
+
+    &__numbers {
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+    }
+
+    &__numbers-list {
+    }
+
+    &__numbers-arrow-prev a, &__numbers-arrow-next a {
+        padding: 6px 10px;
+
+        svg {
+            height: 14px;
+            width: 12px;
+            fill: $dark-brand-color;
+        }
+    }
+
+    &__numbers-arrow-prev a svg {
+        transform: rotate(180deg);
+    }
+
+    &__numbers-item {
+    }
 }
 
 .bg-body-tertiary {
@@ -185,4 +217,22 @@
         border-left: 1px solid #CBCBCB;
         border-top: 1px solid $brand-color;
     }
+}
+
+.active>.page-link, .page-link.active {
+    background-color: $brand-color;
+    border-color: $brand-color;
+}
+
+.page-link {
+    color: $brand-color;
+}
+
+.pagination {
+    --bs-pagination-color: $brand-color;
+    --bs-pagination-hover-color: $brand-color;
+    --bs-pagination-focus-color: $brand-color;
+    --bs-pagination-active-bg: $dark-brand-color;
+    --bs-pagination-active-border-color: $dark-brand-color;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(34, 132, 45, 0.25);
 }

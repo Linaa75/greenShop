@@ -1,0 +1,64 @@
+.categories {
+    flex: 1 1 1%;
+    flex-direction: column;
+    padding: 18px 0;
+    background: $bg-color;
+    height: 100%;
+    display: none;
+
+    @media screen and (min-width: $breakpoint-md) {
+        display: flex;
+    }
+
+    &__container {
+    }
+
+    &__categories {
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 16px;
+        padding: 0 0 7px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 10px;
+    }
+
+    &__list-item {
+        line-height: 40px;
+
+        &.active a {
+            color: $brand-color;
+            font-weight: 700;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__list-item-name {
+    }
+
+    &__list-item-qty {
+    }
+
+    &__price, &__size {
+        padding: 35px 0 0;
+    }
+
+    &__price-title {
+        padding: 0 0 21px;
+    }
+
+    &__btn {
+        padding: 8px 25px;
+        margin: 15px 0 0;
+    }
+}
